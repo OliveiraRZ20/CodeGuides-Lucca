@@ -170,12 +170,12 @@ item3 = lista1[2]
 print(item1)
 
 # substituir item na lista (colocar coordenada)
-listaex = ["01, 02, 03, 04"]
+listaex = ["01", "02", "03", "04"]
 listaex[2] = "chocolate"
 print(listaex)
 
 # deletar item de uma lista (colocar coordenada)
-lista1 = ["arroz, feijao, frango, batata doce"]
+lista1 = ["arroz", "feijao", "frango", "batata doce"]
 del lista1[1]
 
 # listas dentro de listas
@@ -192,7 +192,7 @@ listitem01 = lista2[0][0]
 print(listitem01)
 
 # somar duas listas (somente adicionar sem nenhuma interação)
-lista1 = ["arroz, feijao, frango, batata doce"]
+lista1 = ["arroz", "feijao", "frango", "batata doce"]
 lista2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 lista_total = lista1 + lista2
 print(lista_total)
@@ -202,7 +202,7 @@ lista2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(10 in lista2)
 
 # comprimento de uma lista [len()]
-lista1 = ["arroz, feijao, frango, batata doce"]
+lista1 = ["arroz", "feijao", "frango", "batata doce"]
 len(lista1)
 
 # valor maximo de uma lista [max()]
@@ -214,7 +214,7 @@ listanum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 min(listanum)
 
 # adicionar item a uma lista [.append("x")]
-lista1 = ["arroz, feijao, frango, batata doce"]
+lista1 = ["arroz", "feijao", "frango", "batata doce"]
 lista1.append("x")
 print(lista1)
 
@@ -225,21 +225,21 @@ for item in lista1:
 print(lista_blank)
 
 # checar qual a coordenada do valor x [.index("x")]
-lista1 = ["arroz, feijao, frango, batata doce"]
+lista1 = ["arroz", "feijao", "frango", "batata doce"]
 lista1.index("frango")
 
 # inserir valor em lista [.insert(coordenada, "x")]
-lista1 = ["arroz, feijao, frango, batata doce"]
+lista1 = ["arroz", "feijao", "frango", "batata doce"]
 lista1.insert(2, "x")
 print(lista1)
 
 # remover item da lista [.remove("x")]
-lista1 = ["arroz, feijao, frango, batata doce"]
+lista1 = ["arroz", "feijao", "frango", "batata doce"]
 lista1.remove("x")
 print(lista1)
 
 # colocar a lista ao contrário [.reverse()]
-lista1 = ["arroz, feijao, frango, batata doce"]
+lista1 = ["arroz", "feijao", "frango", "batata doce"]
 lista1.reverse()
 print(lista1)
 
