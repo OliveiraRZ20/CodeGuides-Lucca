@@ -21,4 +21,47 @@ Aqui nós teremos alguns bons arquivos com praticamente **TUDO** sobre python, s
   - Métodos dos dicionários como: key e update
   - Criação de tuplas.
   - Indexação de tuplas.
-- Arquivo 2:
+  
+- Arquivo 2: CONDICIONAIS
+  - Operações relacionais e valores booleanos (True/False).
+  - Condicionais como: if, else, elif, try, except
+  - Condicionais aninhados.
+  - Operadores como: and, not, or
+  - PlaceHolders como: %s, %r
+  - Loop For.
+  
+- Arquivo 3: CLASSES
+  - Criação de classes.
+  - Criação do método construtor da classe
+  - Criação de métodos personalizados
+  - Associação de dados as classes
+  - Atributos como: hasattr, setattr, getattr, delattr
+  - Herança de classes.
+
+- Arquivo 4: ARQUIVOS E UTILIZADES
+  - Abrir arquivos com python.
+  - Extrair informações de arquivos externos.
+  - Função with.
+  - Utilizar arquivos .JSON
+  - Funções mais avançadas como: map, reduce, filter, zip, enumerate
+  - Utilização de expressões regulares para extração de informação personalizada.
+ 
+- Arquivo 5: Numpy
+  - Criação de arrays.
+  - Indexação de arrays.
+  - Métodos dos arrays como: shape, cumsum, cumprod, arange, zeros, eye, diag, ones, etc...
+  - Criação de matrizes.
+  - Métodos extras como: size, dtype, itemsize, nbytes, ndim, mean, std, var, dot, array_equal, etc...
+
+- Arquivo 6: Pandas
+  - Criação de DataFrames.
+  - Indexação de Dataframes
+  - Importação de DataFrames externos
+  - Métodos de DataFrames como: values, dtypes, columns, index, shape
+  - Operadores lógicos como: == / & / |
+  - Funções de DataFrames como: sample, head, tail, filter, isna, sum, describe, value_counts, etc...
+  - Filtragem de DataFrame para filtros personalizados
+  - Operações com DataFrames.
+
+- Arquivo 7: Matplotlib
+  - A ser desenvolvido...
