@@ -63,6 +63,7 @@ df_excel = pd.read_excel("C:\\LUCCA\\1-lucca\\Top Musicas Piano.xlsx")
 
 df.values
 
+# |====================================================|
 
 # Método .dtypes
 
@@ -71,6 +72,7 @@ df.values
 
 df.dtypes
 
+# |====================================================|
 
 # Método .columns
 
@@ -79,6 +81,7 @@ df.dtypes
 
 df.columns
 
+# |====================================================|
 
 # Método .index
 
@@ -87,6 +90,7 @@ df.columns
 
 df.index
 
+# |====================================================|
 
 # Método .shape
 
@@ -124,6 +128,7 @@ df[0:3] # retorna as linhas 0,1 e 2
 
 df['estado2' : 'estado4'] # retorna as linhas estado2, estado3, estado4
 
+# |====================================================|
 
 # Operadores Lógicos Para manipulação de dados
 
@@ -144,15 +149,19 @@ df_csv[ (df_csv.Segmento == 'Home Office') & (df_csv.Regiao == 'South')].head() 
 
 df_csv[(df_csv.Segmento == 'Home Office') | (df_csv.Regiao == 'South')].head()
 
+# |====================================================|
 
 # Função .sample(x) = imprimir na tela o número X de linhas selecionadas aleatoriamente
 
 df.sample(5) # imprimir 5 linhas escolhidas aleatoriamente cada vez que o comando é executado
 
+# |====================================================|
 
 # Função .head() = imprimir na tela as primeiras 5 (CINCO) linhas do Dataframe escoliho
 
 df.head()
+
+# |====================================================|
 
 # Função .tail() = imprimir na tela as ultimas 5 (CINCO) linhas do DataFrame escolhido
 
@@ -170,6 +179,7 @@ df.tail(5)
 df.head(-3)
 df.tail(-3)
 
+# |====================================================|
 
 # Método .filter(items = ['linhaX'], axis = 0)
 
@@ -200,6 +210,7 @@ df['Ano'].isna()
 
 df.isna().sum()
 
+# |====================================================|
 
 # Método .describe()
 
@@ -208,6 +219,7 @@ df.isna().sum()
 
 df.describe()
 
+# |====================================================|
 
 # Método de filtragem por condição
 
@@ -216,6 +228,7 @@ df.describe()
 
 df[ df['Taxa Desemprego'] < 2] # assim ele retorna somente as linhas que tem a taxa desemprego menor que 2
 
+# |====================================================|
 
 # Método .value_counts()
 
@@ -229,6 +242,7 @@ df_csv['Quantidade'].value_counts().index[0] # isso retorna automaticamente o pr
 
 df_csv.Segmento.value_counts()
 
+# |====================================================|
 
 # Método .fillna(value = valorX, inplace = |True ou False|)
 
@@ -239,6 +253,7 @@ df_csv.Segmento.value_counts()
 
 df_csv['Quantidade'].fillna(value = 'bobão', inplace = True)
 
+# |====================================================|
 
 # Método .query('Condição criada pelo usuário')
 
@@ -250,6 +265,7 @@ df_maioral = df_csv.query('229 < Valor_Venda < 10000') # assim temos um DataFram
 
 df_acima_media = df_maioral.query('Valor_Venda > 766') # assim teremos um DataFrame somente com valores acima da média (766)
 
+# |====================================================|
 
 # Método .isin([X,Y,Z,...])
 
@@ -263,6 +279,7 @@ df_csv[df_csv['Quantidade'].isin([5,7,9,11])] # ele retorna somente linhas que c
 
 df_csv[df_csv['Quantidade'].isin([5,7,9,11])].shape
 
+# |====================================================|
 
 # Método .mean()
 
@@ -270,6 +287,7 @@ df_csv[df_csv['Quantidade'].isin([5,7,9,11])].shape
 
 df_csv.mean()
 
+# |====================================================|
 
 # Método .groupby(['ColunaX', 'ColunaY'])
 
@@ -285,6 +303,7 @@ df_csv[['Segmento', 'Regiao', 'Valor_Venda']].groupby(['Segmento', 'Regiao']).me
 
 df_csv[['Segmento', 'Regiao', 'Valor_Venda']].groupby(['Segmento', 'Regiao']).agg(['mean', 'std', 'count'])
 
+# |====================================================|
 
 # Método .startswith('String')
 
@@ -293,6 +312,7 @@ df_csv[['Segmento', 'Regiao', 'Valor_Venda']].groupby(['Segmento', 'Regiao']).ag
 
 df_csv[df_csv.Segmento.str.startswith('Con')].head() # filtro aplicado para linhas com a coluna Segmento começando com as letras Con
 
+# |====================================================|
 
 # Método .endswith('String')
 
@@ -301,6 +321,7 @@ df_csv[df_csv.Segmento.str.startswith('Con')].head() # filtro aplicado para linh
 
 df_csv[df_csv.segmento.str.endswith('mer')].head() # filtro aplicado para linhas com a coluna Segmento terminando com as letras mer
 
+# |====================================================|
 
 # Método .split('Char')
 
@@ -323,6 +344,7 @@ df_csv['Ano'] = df_csv.ID_Pedido.str.split('-').str[1] # isso cria uma coluna ch
 
 df_csv['Data_Pedido'].str.lstrip('20', inplace = True) # isso procura na coluna Data_Pedido a partir do lado esquerdo o valor 20 e retira ele
 
+# |====================================================|
 
 # Método .replace('Antes', 'Depois')
 
@@ -331,6 +353,7 @@ df_csv['Data_Pedido'].str.lstrip('20', inplace = True) # isso procura na coluna 
 
 df_csv['ID_Cliente'] = dsa_df['ID_Cliente'].str.replace('CG', 'AX') # isso substitui a coluna ID_Cliente antiga pela nova com a substituicao feita
 
+# |====================================================|
 
 # Método .cat(Local da informação, sep = 'Char')
 
@@ -339,3 +362,5 @@ df_csv['ID_Cliente'] = dsa_df['ID_Cliente'].str.replace('CG', 'AX') # isso subst
 
 df_csv['Pedido_Segmento'] = df_csv['ID_Pedido'].str.cat(df_csv['Segmento'], sep = '-') # sep é de separador, o que vai ter entre as duas informações
 
+
+# |====================================================================================================================|
