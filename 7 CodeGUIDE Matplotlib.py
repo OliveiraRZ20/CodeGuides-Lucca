@@ -25,6 +25,8 @@ import matplotlib.pyplot as plt
 
 # |====================================================================================================================|
 
+# UTILIZANDO PYPLOT
+
 # SEUS PRIMEIROS GRÁFICOS:
 # A partir daqui entramos na sessão de explicação de cada tipo de gráfico com informações adicionais sobre cada um
 
@@ -35,6 +37,11 @@ import matplotlib.pyplot as plt
 plt.plot([1,3,5], [2,4,7])
 plt.show() # P.S = Sempre lembrar de usar o .show() no final pra mostrar o gráfico ok
 
+# para utilizar mais de uma linha no gráfico, basta colocar mais linhas .plot, pois cada comando server pra uma linha diferente
+
+plt.plot([1,3,5], [2,4,7])
+plt.plot([3,4,5], [4,6,7])
+plt.show()
 
 # argumentos do Plot padrão:
 
