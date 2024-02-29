@@ -50,12 +50,13 @@ plt.show()
 plt.plot([1, 2, 3],[4, 5, 6], label= "Gráfico com Matplotlib")
 
 # color= "Str" = definição da cor da variavel no gráfico, lembrar do nome das cores ou do atalho de uma letra da cor escolhida
+
 # b : blue, g : green, r : red, c : cyan, m : magenta, y : yellow, k : black, w : white
 
 plt.plot([1, 2, 3],[4, 5, 6], color= "blue")
 
 
-# métodos do Plot Padrão:
+# métodos dos Plots:
 
 # plt.xlabel("Str") = definição do nome do eixo X com o "Str" que estiver como argumento
 
@@ -75,3 +76,95 @@ plt.title("Teste Plot")
 # plt.legend() = aplicação da legenda no gráfico gerado com o argumento label="Str" dentro do .plot() 
 
 plt.legend()
+
+# |====================================================|
+
+# Gráfico de barras
+
+x1 = [2,4,6,8,10]
+y1 = [6,7,8,2,4]
+
+plt.bar(x1, y1, label = 'Listas1', color = 'blue')
+plt.show()
+
+# |====================================================|
+
+# Gráfico histograma
+
+idades = [22,65,45,55,21,22,34,42,41,4,99,101,120,122,130,111,115,80,75,54,44,64,13,18,48]
+bins = [0,10,20,30,40,50,60,70,80,90,100,110,120,130]
+
+plt.hist(idades, bins, histtype = 'bar', rwidth = 0.9)
+plt.show()
+
+# Argumentos dos histogramas
+
+# histtype = "Str" = ‘bar’, ‘barstacked’, ‘step’, ‘stepfilled’
+
+plt.hist(idades, bins, histtype= 'barstacked')
+plt.show()
+
+# rwidth = int = largura das barras do gráfico.
+
+# |====================================================|
+
+# Gráfico de dispersão
+
+x2 = [1,2,3,4,5,6,7,8]
+y2 = [5,2,4,5,6,8,4,8]
+
+plt.scatter(x2, y2, label = 'Pontos', color = 'r', marker = 'o')
+
+# argumentos dos gráficos de dispersão
+
+# marker= "Str" = "o", "*"
+
+plt.scatter(x2, y2, marker="o")
+plt.show()
+
+# |====================================================|
+
+# Gráfico de Área empilhada
+
+dias = [1,2,3,4,5]
+dormir = [7,8,6,77,7]
+comer = [2,3,4,5,3]
+trabalhar = [7,8,7,2,2]
+passear = [8,5,7,8,13]
+
+plt.stackplot(dias, dormir, comer, trabalhar, passear, colors = ['m','c','r','k','b'])
+plt.show()
+
+# |====================================================|
+
+# Gráfica de pizza
+
+fatias = [7, 2, 2, 13]
+atividades = ['dormir', 'comer', 'passear', 'trabalhar']
+cores = ['olive', 'lime', 'violet', 'royalblue']
+
+plt.pie(fatias, labels = atividades, colors = cores, startangle = 90, shadow = True, explode = (0,0.2,0,0))
+plt.show()
+
+# argumentos do gráfico de pizza
+
+# startangle = int = 0 to 360 = define o angulo de começo das categorias
+
+plt.pie(fatias, labels = atividades, colors = cores, startangle = 90)
+plt.show()
+
+# shadow = bool = True or False = define se o gráfico vai ter sombra ou não
+
+plt.pie(fatias, labels= atividades, shadow= True)
+plt.show()
+
+# explode = (tuple int) = define a separação para fora de alguma categoria específica, em ordem de aparição na lista
+
+plt.pie(fatia, labels= atividades, explode= (0,0.2,0,0))
+plt.show()
+
+# |====================================================================================================================|
+
+# UTILIZANDO O PYLAB
+
+from pylab import *
