@@ -98,5 +98,3 @@ sea.despine()
 
 # Show
 plt.show()
-
-
