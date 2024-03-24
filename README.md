@@ -64,4 +64,20 @@ Aqui nós teremos alguns bons arquivos com praticamente **TUDO** sobre python, s
   - Operações com DataFrames.
 
 - Arquivo 7: Matplotlib
-  - A ser desenvolvido...
+  - Criação de gráficos com .plot()
+  - Funções de gráficos como: xlabel, ylabel, title, legend, show
+  - Criação de gráficos de barras com .bar()
+  - Criação de Histogramas com .hist()
+  - Criação de gráficos de disperção com .scatter()
+  - Criação de gráficos de área empilhada com .stackplot()
+  - Criação de gráficos de pizza com .pie()
+  - Utilização da biblioteca Pylab
+  - Funções do Pylab como: set_xlabel, set_ylabel, set_title, add_axes
+
+- Arquivo 8: Seaborn
+  - Utilização das bibliotecas: seaborn, random, numpy, pandas e matplotlib
+  - Funções de gráficos como: joinplot, lmplot, kdeplot, distplot, rugplot, boxplot
+
+- Arquivo 9: Sqlite3 (Linguagem SQL)
+  - A ser desenvolvido
+
