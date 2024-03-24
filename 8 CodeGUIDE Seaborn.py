@@ -32,6 +32,7 @@ sea.jointplot(data = dados, x = "total_bill", y = "tip", kind = 'reg')
 sea.lmplot(data = dados, x = "total_bill", y = "tip", col = "smoker")
 
 # função .lmplot(data = *obj*, x = *str*, y = *str*, fit_reg = bool)
+# P.S = gráfico de dispersão baseado em duas variaveis com linha de regressão e intervalo de confiança
 
 df = pd.DataFrame()
 df['idade'] = random.sample(range(20, 100), 30)
@@ -41,21 +42,25 @@ df.head()
 sea.lmplot(data = df, x = "idade", y = "peso")
 
 # função .kdeplot(*DataFrame*)
+# P.S: gráfico de linha baseado na coluna *str* e na densidade dos dados
 
 sea.kdeplot(df.idade)
 
 sea.kdeplot(df.peso)
 
 # função .distplot(*DataFrame*)
+# P.S: .kdeplot mas com um histograma atrás
 
 sea.distplot(df.peso)
 
 # função .rugplot(*DataFrame*)
+# P.S: adicionar rugas no gráfico criado inicialmente (ex: histograma com rugas de valores exatos)
 
 plt.hist(df.idade, alpha = .3)
 sea.rugplot(df.idade)
 
 # função .boxplot(*DataFrame*, color= *str*)
+# P.S: Gráfico de Caixa
 
 sea.boxplot(df.idade, color = 'm')
 
